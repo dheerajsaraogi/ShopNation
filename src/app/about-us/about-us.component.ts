@@ -15,4 +15,7 @@ export class AboutUsComponent implements OnInit {
 navtologin(){
   this.router.navigate(['/login']);
 }
+back(){
+  this.router.navigate(['/']);
+}
 }

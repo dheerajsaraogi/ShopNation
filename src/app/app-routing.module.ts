@@ -22,7 +22,7 @@ const routes: Routes = [
   {path: 'dashboard/:name', component: DashboardComponent,canActivate:[LoginGuard]},
   {path: 'admin', component:AdminComponent,canActivate:[LoginGuard]},
   {path: 'productDescription/:productID', component:ProductDescriptionComponent,canActivate:[LoginGuard]},
-  {path: 'aboutUs', component:AboutUsComponent,canActivate:[LoginGuard]},
+  {path: 'aboutUs', component:AboutUsComponent},
   {path: 'payment', component:PaymentComponent},
   {path: 'security', component:SecurityComponent},
   {path: 'return', component:ReturnComponent},
