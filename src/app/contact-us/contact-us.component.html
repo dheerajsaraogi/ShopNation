@@ -1,0 +1,265 @@
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: midnightblue">
+        <img style="width: 150px; margin-left: 70px" src="../../assets/ShopNation.png" alt="[]">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search for Products, Brands and more" aria-label="Search" style="width: 520px; margin-left: 40px">
+                    <button style="background-color: midnightblue; border: none !important"><i class="fa fa-search"
+                aria-hidden="true" style="color:cornsilk"></i></button>
+                    <!-- <button class="btn btn-danger my-2 my-sm-0" type="submit">Submit</button> -->
+                </form>
+                <button *ngIf="!userIsAuthenticated" (click)="navtologin()" class="btn btn-binary" style="background-color: midnightblue; width: 200px; margin-left: 25px; color:cornsilk">Login & Sign
+            up</button>
+                <h5 *ngIf="userIsAuthenticated" style="margin-left:20px; color: cornsilk; margin-top:10px">Hi, {{name}}</h5>
+                <button *ngIf="userIsAuthenticated" (click)="nav()" class="btn btn-binary" style="background-color: midnightblue; width: 100px; margin-left: 20px; color:cornsilk">Log Out</button>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-left:0px; color:cornsilk">
+              More</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                        <a class="dropdown-item" href="#"><i class="fa fa-briefcase" aria-hidden="true"></i> Sell on ShopNation</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#"><i class="fa fa-question-circle" aria-hidden="true"></i> 24x7 Customer
+                Care</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#"><i class="fa fa-line-chart" aria-hidden="true"></i> Advertise</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#"><i class="fa fa-download" aria-hidden="true"></i> Download App</a>
+
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a (click)="navtocart()" class="nav-link" style="margin-left:60px; color:cornsilk; cursor:pointer"><i class="fa fa-shopping-cart"
+                aria-hidden="true"></i> Cart</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- <img src="../../assets/ShopNation.png" alt="[]"> -->
+</div>
+
+<div class="container1">
+
+    <div class="parallax" style="margin-top: 50px"></div>
+
+
+    <div class="centered display-1" style="color: rgb(255, 255, 255);font-size: 7;opacity: 0.5;">
+
+        <b>Contact Us</b>
+        <hr style=" border: 2px solid rgb(44, 42, 51);border-radius: 15px ;width: 550px;margin-left: 1px;">
+
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="conatiner " style="margin-top: 80px;">
+    <div class=" row ">
+        <div class="col-lg-6 ">
+
+            <div class="container shadow-lg p-3 mb-5 bg-white rounded font-weight-bold" style="margin-left: 20px;background-image: url('../../assets/contact-us/back4blur.jpg');background-repeat: no-repeat;background-size: cover;font-weight: 100px;border:none">
+
+
+
+
+                <form class="needs-validation" validate>
+                    <div class="form-row">
+                        <div class="col-md-6 mb-3">
+
+                            <label for="validationTooltip01">First name</label>
+                            <div class="input-group rounded">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                            <span class="fas fa-address-book"></span>
+                                    </span>
+                                </div>
+                                <input type="text" class="form-control" id="validationTooltip01" placeholder="First name" required style="opacity: 0.6">
+                                <div class="valid-tooltip">
+                                    Looks good!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="validationTooltip02">Last name</label>
+                            <div class="input-group rounded">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                                <span class="fas fa-address-book"></span>
+                                    </span>
+                                </div>
+                                <input type="text" class="form-control" id="validationTooltip02" placeholder="Last name" required style="opacity: 0.6">
+                                <div class="valid-tooltip">
+                                    Looks good!
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6 mb-3" style="padding-left: 0px">
+                        <label for="validationTooltipUsername">Email</label>
+                        <div class="input-group rounded">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="validationTooltipUsernamePrepend">
+                                        <span class="fas fa-at"></span>
+                                </span>
+                            </div>
+                            <input type="text" class="form-control" id="validationTooltipUsername" placeholder="someone@abc.com" aria-describedby="validationTooltipUsernamePrepend" required style="opacity: 0.6">
+                            <div class="invalid-tooltip">
+                                Please choose a unique and valid username.
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                    <div class="form-row">
+                        <div class="col-md-4 mb-3">
+                            <label for="validationTooltip03">City</label>
+                            <div class="input-group rounded">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="validationTooltipUsernamePrepend">
+                                                <span class="fas fa-landmark"></span>
+                                    </span>
+                                </div>
+                                <input type="text" class="form-control" id="validationTooltip03" placeholder="City" required style="opacity: 0.6">
+                                <div class="invalid-tooltip">
+                                    Please provide a valid city.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="validationTooltip04">State</label>
+                            <div class="input-group rounded">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="validationTooltipUsernamePrepend">
+                                                <span class="fas fa-landmark"></span>
+                                    </span>
+                                </div>
+                                <input type="text" class="form-control" id="validationTooltip04" placeholder="State" required style="opacity: 0.6">
+                                <div class="invalid-tooltip">
+                                    Please provide a valid state.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form">
+                        <div class="col-md-4 mb-3" style="padding-left: 0px">
+                            <label for="validationTooltip05">Zip</label>
+                            <div class="input-group rounded">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="validationTooltipUsernamePrepend">
+                                                <span class="fas fa-pencil-alt"></span>
+                                    </span>
+                                </div>
+                                <input type="text" class="form-control" id="validationTooltip05" placeholder="Zip" required style="opacity: 0.6">
+                                <div class="invalid-tooltip">
+                                    Please provide a valid zip.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="comment">Message:</label>
+                        <textarea class="form-control" rows="2" id="comment" name="text" style="opacity: 0.6"></textarea>
+                    </div>
+
+                    <div style="text-align: center">
+                        <button class="btn btn-secondary" type="submit" style="opacity: 0.6">Submit form</button>
+
+                    </div>
+
+
+                </form>
+
+            </div>
+        </div>
+
+
+
+        <div class="col-lg-6" style="padding-left: 20px">
+            <div class="row" style="height: 430px">
+
+
+
+
+                <div class="container shadow-lg p-3 mb-5 bg-white rounded ">
+                    <div class='' style="font-size: 45px">
+                        <p>Address</p>
+                    </div>
+
+                    <span style="font-size: 20px">Main Center</span>
+                    <div class="container" style="padding: 0px">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <span style="color: rgb(158, 155, 155)"> SIDDAGANGA INSTITUTE OF TECHNOLOGY,<br>
+                                                B.H. ROAD, TUMKUR<br>
+                                                KARNATAKA.<br>
+                                                572103.
+                                            </span><br><br>
+
+                                <span style="font-size: 20px">Telephone: </span>
+
+                                <span style="color: rgb(158, 155, 155)"><a href="tel:+919113688781">Call us free!</a></span><br><br>
+
+                                <span style="font-size: 20px">Email: </span>
+
+                                <span style="color: rgb(158, 155, 155)"> <a href="mailto:sitshopnation123@gmail.com" >sitshopnation123@gmail.com</a> </span>
+
+
+                            </div><br>
+                            <div class="col-lg-6">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3882.375573721884!2d77.12390611477443!3d13.326897890623496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb02e826fb691ef%3A0xe78608813c36f380!2sSiddaganga+Institute+Of+Technology%2C+Tumakuru!5e0!3m2!1sen!2sin!4v1563562881110!5m2!1sen!2sin"
+                                    width="350" height="220" frameborder="0" style="border:10" allowfullscreen></iframe>
+                            </div>
+                        </div>
+
+
+                    </div><br>
+
+
+                </div>
+
+
+
+
+            </div>
+            <div class="row" style="padding-top: 0rem">
+                <div class="container shadow-lg p-3 mb-5 bg-white rounded ">
+
+                    <div style="font-size: 25px;">
+                        <p>Follow us on:
+                            <span style="font-size: 30px; text-align: center">
+                                    <a href="http://www.facebook.com"><i class="fa fa-facebook-f ml-2" style="color: rgb(79, 89, 143)"></i></a>
+                                    <a href="http://www.youtube.com"><i class="fa fa-youtube mx-4" style="color: rgb(206, 14, 14)"></i></a>
+                                    <a href="http://www.twitter.com"><i class="fa fa-twitter mr-2 " style="color: rgb(16, 186, 216)"></i></a>
+                                    <a href="http://www.linkedin.com"><i class="fa fa-linkedin ml-2"  style="color: rgb(16, 119, 167)"></i></a>
+                                </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>
+
+<!-- </div> -->
+<!-- <app-nav-bar></app-nav-bar>-->

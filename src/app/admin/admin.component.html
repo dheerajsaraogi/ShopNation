@@ -1,0 +1,89 @@
+<!-- <div class="container">
+    <form [formGroup]="form" (submit)=onSaveProduct()>
+        <div class="form-row m-3">
+            <div class="col">
+                <label for="selectCat" class="" id="disappearLabel" style="position: absolute;
+                left: 1.5%; top:15%; color: gray">Select Category</label>
+                <select type="text" id="selectTag" class="form-control" [formControlName]="'category'" name="selectCat" onchange="disappear()">
+                    <option disabled>---Product Category---</option>
+                    <option value="Electronics">ELECTRONICS</option>
+                    <option value="Sports">SPORTS</option>
+                    <option value="Clothing">CLOTHINGS</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-row m-3">
+            <div class="col">
+                <input type="text" class="form-control" placeholder="Product Name" formControlName="title">
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" placeholder="Product Price" formControlName="price">
+            </div>
+        </div>
+        <div class="form-row m-3">
+            <div class="col">
+                <textarea rows="6" class="form-control" placeholder="Product Description" formControlName="description"></textarea>
+            </div>
+        </div>
+        <p *ngIf="form.get('title').is-invalid">Error</p>
+        <div class="form-row m-3">
+            <input type="text" class="form-control" placeholder="Image URL" formControlName="imagePath">
+        </div>
+        <div class="form-row m-3 justify-content-center">
+            <button type="submit" class="btn btn-lg btn-info">Add Product</button>
+        </div>
+
+    </form>
+</div>
+<div class="container-fluid">
+    <app-product-card></app-product-card>
+</div> -->
+
+
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: midnightblue">
+        <img style="width: 150px; margin-left: 70px" src="../../assets/ShopNation.png" alt="[]">
+        <h4 align=center style="color:cornsilk; margin-left: 380px; font-size: 40px; font-weight: 700; letter-spacing: 5px">ADMIN PANEL</h4>
+    </nav>
+
+</div>
+<div class="container" style="margin-top:100px">
+    <form [formGroup]="form" (submit)=onSaveProduct()>
+        <div class="form-row m-3">
+            <div class="col">
+                <label for="selectCat" class="" id="disappearLabel" style="position: absolute;
+                left: 1.5%; top:15%; color: gray">Select Category</label>
+                <select type="text" id="selectTag" class="form-control" [formControlName]="'category'" name="selectCat" onchange="disappear()">
+                    <!-- <option disabled>---Product Category---</option> -->
+                    <option value="Electronics">ELECTRONICS</option>
+                    <option value="Sports">SPORTS</option>
+                    <option value="Clothing">CLOTHINGS</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-row m-3">
+            <div class="col">
+                <input type="text" class="form-control" placeholder="Product Name" formControlName="title">
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" placeholder="Product Price" formControlName="price">
+            </div>
+        </div>
+        <div class="form-row m-3">
+            <div class="col">
+                <textarea rows="6" type="text" class="form-control" placeholder="Product Description" formControlName="description"></textarea>
+            </div>
+        </div>
+        <!-- <p *ngIf="form.get('title').is-invalid">Error</p> -->
+        <div class="form-row m-3">
+            <input type="text" class="form-control" placeholder="Image URL" formControlName="imagePath">
+        </div>
+        <div class="form-row m-3 justify-content-center">
+            <button type="submit" class="btn btn-lg text-white" style="background-color: midnightblue">Add Product</button>
+        </div>
+
+    </form>
+</div>
+<div class="container-fluid">
+    <app-product-card></app-product-card>
+</div>

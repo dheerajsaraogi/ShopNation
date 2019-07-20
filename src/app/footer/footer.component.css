@@ -1,0 +1,35 @@
+.footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(3, 28, 69);
+    color: white;
+    text-align: center;
+ }
+
+ .vl {
+    border-left: 1px solid white;
+    height: 126px;
+    margin-top: 42px
+  }
+
+  h6{
+      color: grey;
+      margin-bottom: 15px
+  }
+
+.link{
+      color: aliceblue;
+      font-size: 13px;
+      cursor: pointer;
+  }
+
+  p{
+    font-size: 13px;
+  }
+
+  hr{
+      border: 0.5px solid white;
+      margin-bottom: 20px
+  }

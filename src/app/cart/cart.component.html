@@ -1,0 +1,101 @@
+<div class="background">
+    <div *ngIf="userIsAuthenticated && arrayLength" class="container">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: midnightblue">
+                <img style="width: 150px; margin-left: 70px" src="../../assets/ShopNation.png" alt="[]">
+                <h1 class="text-white" style="margin-left: 420px; letter-spacing: 8px"><strong>YOUR CART</strong></h1>
+            </nav>
+        </div>
+
+        <div class="container shadow " style="margin-top: 73px">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 mt-5">
+                        <div class="container-fluid p-2 bg-white rounded" style="margin-top:4px">
+
+                            <!-- <div class="row">
+                                                                  <h1 class="edit" style="margin-left: 20px;width: 50px;"><strong>{{i._id.category}}</strong></h1>
+                                                              </div> -->
+
+                            <div class="container-fluid border-0" style=" margin-top:0px">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="d-flex flex-column align-items-center ">
+                                            <div class="row mb-3" *ngFor="let j of productDisplay">
+                                                <div class="col-lg-4" align="center">
+                                                    <img class=" zoom" src="{{j.imagePath}}" alt="Card image cap" height="100" width="100">
+                                                </div>
+
+                                                <div class="col-lg-6" align="center">
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <h6 class="">{{j.title}}</h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <h4 class="" style="color: green; font-weight:750;">{{j.price}}</h4>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-2" align="center">
+                                                    <a class="btn shadow text-white " style="margin-top: 5px; background-color: red" (click)="deleteItem(j.productID)">Delete</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5 mt-5">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <h4>PRICE DETAILS</h4>
+                                </div>
+                            </div>
+                            <div class="container">
+                                <div class="row" *ngFor="let j of productDisplay">
+                                    <div class="col-lg-8">
+                                        <p>Price:</p>
+                                    </div>
+                                    <div class="col-lg-4 d-flex flex-column justify-content-end">
+                                        <p>{{j.price}}.00</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <p><b>Total Payable:</b></p>
+                                </div>
+                                <div class="col-lg-4">
+                                    <p>{{sum | currency:'INR':true:'1.2-2'}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-lg-6 mb-4" align="center">
+                    <a class="btn shadow text-white px-5 py-2 " style="margin-top: 5px; background-color: green; border-radius: 100px" (click)="calc()">Confirm</a>
+                </div>
+                <div class="col-lg-6 mb-4" align="center">
+                    <a class="btn shadow text-white px-5 py-2 " style="margin-top: 5px; background-color: green; border-radius: 100px" (click)="mailOrder()">PAY NOW</a>
+                </div>
+            </div>
+            <!-- <a class="btn shadow text-white px-5 py-2 mb-4 mt-3" style="margin-top: 5px; background-color: midnightblue; border-radius: 100px; margin-left: 430px" (click)="ContShop()">Cont. Shopping</a> -->
+        </div>
+    </div>
+
+    <div *ngIf="!userIsAuthenticated || !arrayLength" class="container shadow p-4 pb-5" align="center">
+        <br>
+        <h1>Your Cart Is Empty</h1>
+        <!-- <a class="btn shadow text-white px-5 py-2 mb-4 mt-3" style="margin-top: 5px; background-color: midnightblue; border-radius: 100px" (click)="ContShop()">Cont.
+        Shopping</a> -->
+    </div>
+</div>

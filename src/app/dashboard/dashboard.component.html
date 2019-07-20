@@ -1,0 +1,49 @@
+<a [routerLink]="['/dashboard',username]"></a>
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: midnightblue">
+        <img style="width: 150px; margin-left: 70px" src="../../assets/ShopNation.png" alt="[]">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search for Products, Brands and more" aria-label="Search" style="width: 520px; margin-left: 40px">
+                    <button style="background-color: midnightblue; border: none !important"><i class="fa fa-search"
+                aria-hidden="true" style="color:cornsilk"></i></button>
+                    <!-- <button class="btn btn-danger my-2 my-sm-0" type="submit">Submit</button> -->
+                </form>
+                <h5 style="margin-left:20px; color: cornsilk; margin-top:10px">Hi, {{name}}</h5>
+                <button *ngIf="userIsAuthenticated" (click)="nav()" class="btn btn-binary" style="background-color: midnightblue; width: 100px; margin-left: 20px; color:cornsilk">Log Out</button>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-left:13px; color:cornsilk">
+              More</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                        <a class="dropdown-item" href="#"><i class="fa fa-briefcase" aria-hidden="true"></i> Sell on ShopNation</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#"><i class="fa fa-question-circle" aria-hidden="true"></i> 24x7 Customer
+                Care</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#"><i class="fa fa-line-chart" aria-hidden="true"></i> Advertise</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#"><i class="fa fa-download" aria-hidden="true"></i> Download App</a>
+
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a (click)="tocart()" class="nav-link" style="margin-left:50px; color:cornsilk; cursor: pointer"><i class="fa fa-shopping-cart"
+                aria-hidden="true"></i> Cart</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+</div>
+<app-item-dropdown></app-item-dropdown>
+<app-carousel></app-carousel>
+<app-electronics></app-electronics>
+<!-- <app-clothing></app-clothing>
+  <app-sports></app-sports> -->
+<app-footer></app-footer>

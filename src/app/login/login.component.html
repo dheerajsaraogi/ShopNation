@@ -1,0 +1,171 @@
+<section id="form">
+    <div class="container form-container shadow mt-5">
+        <div class="row login-bg " style="position: relative">
+
+
+
+
+            <!-- Form sign in start -->
+
+            <div id="form-sign-in-div" class="col-md-7 d-none flex-column justify-content-center" style="position: absolute;top: 50%;transform: translateY(-50%)">
+                <div class="row d-flex justify-content-center">
+                    <h2 style="color:midnightblue">Sign in</h2>
+                </div>
+
+                <div class="row d-flex justify-content-center">
+                    <div class="font-awsome d-flex my-4">
+                        <i class="fa fa-instagram border rounded-circle shadow-sm"></i>
+                        <i class="fa fa-google border rounded-circle shadow-sm mx-4"></i>
+                        <i class="fa fa-linkedin border rounded-circle shadow-sm"></i>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="offset-2 col-8">
+                        <form class="d-flex flex-column flex-grow-1" (submit)="SignIn(loginform)" #loginform="ngForm">
+                            <div class="email-text" align="center">
+                                <small id="emailHelp" class="form-text text-muted mb-3 d-block">or use your email account</small>
+
+                            </div>
+                            <div class="input-group mb-3">
+
+                                <div class="input-group-prepend ">
+                                    <span class="input-group-text bg-transparent" id="basic-addon1"><i class="fa fa-user"></i></span>
+                                </div>
+                                <input type="email" required class="form-control border-left-0 " aria-describedby="emailHelp" placeholder="Email" id="loginID1" name="username" ngModel #usernames="ngModel">
+                                <!-- <p *ngIf="usernames.invalid">email required</p> -->
+                            </div>
+                            <div class="input-group">
+
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text bg-transparent" id="basic-addon1"><i class="fa fa-lock"></i></span>
+                                </div>
+                                <input type="password" class="form-control border-left-0" placeholder="Password" name="password" id="password1" required ngModel #password="ngModel">
+                            </div>
+                            <!-- <div class="input-group mt-3">
+                <div class="input-group-prepend ">
+                  <span class="input-group-text bg-transparent" id="basic-addon1"><i
+                      class="fa fa-address-book"></i></span>
+                </div>
+                <select class="form-control border-left-0" id="userType1" name="userType" required ngModel
+                  #selectdata="ngModel">
+                  <option value="" disabled>--Login As--</option>
+                  <option value="Manager">Admin</option>
+                  <option value="Customer">Customer</option>
+
+                </select>
+              </div> -->
+                            <div class="row d-flex flex-column align-items-center">
+                                <h6 class="mt-4 ">Forgot your password</h6>
+
+                                <button type="submit" class="btn btn-form my-4 text-white" style="background-color: midnightblue">SIGN IN</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- Form sign in end -->
+
+
+
+            <!--  SIGN UP messase start  -->
+
+            <div id="sign-up-div" class="col-md-5 background-sign text-white d-none flex-column justify-content-center align-items-center sign-up-bg" style="height: 100%; position: absolute">
+                <h1 class="mb-5">Hello,Friend!</h1>
+                <p>Enter your personal details</p>
+                <p class="m-0">and start your journey with us</p>
+                <button class="btn btn-form btn-form-white bg-transparent text-white my-5 d-flex justify-content-center" onclick="ani2()">SIGN UP</button>
+            </div>
+
+            <!--  SIGN UP message end -->
+
+
+
+
+            <!--  SIGN IN message start  -->
+
+            <div id="sign-in-div" class="col-md-5 background-sign text-white d-flex flex-column justify-content-center align-items-center sign-up-bg" style="height: 100%;">
+                <h1 class="mb-5">Welcome Back!</h1>
+                <p>To keep connected with us please</p>
+                <p class="m-0">login with your personal info</p>
+                <button class="btn btn-form btn-form-white text-white bg-transparent my-5 d-flex justify-content-center" id="sign-in-btn" onclick="ani()">SIGN IN</button>
+            </div>
+
+            <!--  SIGN IN message end  -->
+
+
+            <!-- form-Sign up start -->
+
+            <div id="form-sign-up-div" class="col-md-7 d-flex flex-column justify-content-center">
+                <div class="row d-flex justify-content-center ">
+                    <h2 style="color:midnightblue">Create Account</h2>
+                </div>
+
+                <div class="row d-flex justify-content-center ">
+                    <div class="font-awsome d-flex my-4 ">
+                        <i class="fa fa-instagram border rounded-circle shadow-sm "></i>
+                        <i class="fa fa-google border rounded-circle shadow-sm mx-4 "></i>
+                        <i class="fa fa-linkedin border rounded-circle shadow-sm "></i>
+                    </div>
+                </div>
+
+                <div class="row ">
+                    <div class="offset-2 col-8 ">
+                        <form class="d-flex flex-column flex-grow-1" (submit)="Signup(registerform)" #registerform="ngForm">
+                            <div class="email-text d-flex justify-content-center">
+                                <small id="emailHelp " class="form-text text-muted mb-3 ">or use your email for registration</small>
+
+                            </div>
+                            <div class="input-group mb-3 ">
+
+                                <div class="input-group-prepend ">
+                                    <span class="input-group-text bg-transparent" id="basic-addon1"><i class="fa fa-address-book"></i>
+                  </span>
+                                </div>
+                                <input type="text " class="form-control border-left-0 " placeholder="Name " ngModel name="name" id="name" #name="ngModel">
+                            </div>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend ">
+                                    <span class="input-group-text bg-transparent" id="basic-addon1"><i class="fa fa-envelope"></i></span>
+                                </div>
+                                <input type="text" class="form-control border-left-0" placeholder="Email" ngModel name="username" id="loginID" #loginID="ngModel">
+                            </div>
+                            <div class="input-group ">
+                                <div class="input-group-prepend ">
+                                    <span class="input-group-text bg-transparent px-3" id="basic-addon1"><i class="fa fa-lock"></i></span>
+                                </div>
+                                <input type="password" class="form-control border-left-0 " placeholder="Password " ngModel name="password" id="password" #password="ngModel">
+                            </div>
+                            <!-- <div class="input-group mt-3">
+                                <div class="input-group-prepend ">
+                                    <span class="input-group-text bg-transparent" id="basic-addon1"><i
+                      class="fa fa-address-book"></i></span>
+                                </div>
+                                <select class="form-control border-left-0" name="userType" id="userType" required ngModel #userType="ngModel">
+                  <option value="" disabled>--Login As--</option>
+                  <option value="Manager">Admin</option>
+                  <option value="Customer">Customer</option>
+
+                </select>
+                            </div> -->
+                            <div class="row d-flex flex-column align-items-center ">
+
+                                <button type="submit " class="btn text-white btn-form my-4 " style="background-color: midnightblue">SIGN UP</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- form-Sign up end -->
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+</section>\

@@ -1,0 +1,82 @@
+.container1 {
+    position: relative;
+    text-align: center;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.parallax {
+    /* The image used */
+    background-image: url("../../assets/aboutus/back2.jpg");
+    /* Set a specific height */
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 550px
+}
+
+#header {
+    position: absolute;
+    z-index: 1000;
+    top: 200px;
+    left: 200px;
+}
+
+.text-box {
+    height: 800px;
+    padding: 50px;
+}
+
+@media only screen and (max-device-width: 1024px) {
+    .parallax {
+        background-attachment: scroll;
+    }
+}
+
+.navbar {
+    margin-bottom: 0 !important;
+}
+
+.vl {
+    border-left: 3px solid rgb(83, 106, 238);
+    height: 450px;
+    position: absolute;
+    left: 50%;
+    margin-left: 200px;
+    top: 0;
+}
+
+.grad1 {
+    /* font-size: 72px; */
+    background: -webkit-linear-gradient(rgb(209, 230, 20), rgb(219, 111, 10));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.grad2 {
+    /* font-size: 72px; */
+    background: -webkit-linear-gradient(rgb(24, 228, 211), rgb(10, 118, 219));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.grad3 {
+    /* font-size: 72px; */
+    background: -webkit-linear-gradient(rgb(184, 73, 73), rgb(219, 96, 213));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.grad4 {
+    /* font-size: 72px; */
+    background: -webkit-linear-gradient(rgb(24, 228, 41), rgb(233, 236, 46));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
