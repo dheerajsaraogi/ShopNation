@@ -41,7 +41,6 @@ export class CartService {
     })
   }
 
-
   getProducts(){
     this.http.get("http://localhost:1025/cart/getProduct")
     .pipe(

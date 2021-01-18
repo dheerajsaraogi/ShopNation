@@ -13,16 +13,11 @@ router.use(bodyParser.urlencoded({ extended: false }));
 
 
 router.delete("/:id", (req, res, next) => {
-    // console.log(req.param.id);
-    // res.status(200).json({
-    //     message: "Item deleted successfully"
-    // })
 
-    cartModel.deleteOne({ _id: req.params.id }).then(result => {
+        cartModel.deleteOne({ _id: req.params.id }).then(result => {
         console.log(result);
         res.status(200).json({ message: "Item deleted!" });
     });
-
 
 })
 
@@ -70,7 +65,7 @@ router.post('/mail', (req, res, next) => {
         from: 'sitshopnation@gmail.com', // sender address
         to: req.body.mail, // list of receivers
         subject: "Order placed successfully", // Subject line
-        text: "Your order has been successfully placed.Thank You for shopping with us", // plain text body
+        text: "Your order has been successfully placed.Thank You for shopping with us.", // plain text body
         // html: "<b>Hello world?</b>" // html body
     }, (err, res) => {
         if (err) {

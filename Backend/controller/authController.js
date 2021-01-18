@@ -14,14 +14,15 @@ router.use(bodyParser.urlencoded({ extended: false }));
 const mongoose = require('mongoose');
 
 
-// mongoose.connect('mongodb+srv://amita:5SxAq8ihvbuN0WIv@cluster1-dm6iy.mongodb.net/test?retryWrites=true/E-commerce');
-//mongoose.connect('mongodb://localhost/E-commerce');
 mongoose.connect('mongodb+srv://amita:5SxAq8ihvbuN0WIv@cluster1-dm6iy.mongodb.net/test?retryWrites=true/E-commerce');
+//mongoose.connect('mongodb://localhost/E-commerce');
+// mongoose.connect('mongodb+srv://amita:5SxAq8ihvbuN0WIv@cluster1-dm6iy.mongodb.net/test?retryWrites=true/E-commerce');
 
 
 
 router.post('/signup', (req, res, next) => {
 
+    console.log(req.body);
     var hash = bcrypt.hashSync(req.body.password, saltRounds);
     var userJson = {
         name: req.body.name,

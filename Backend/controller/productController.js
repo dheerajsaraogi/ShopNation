@@ -6,12 +6,12 @@ router.use(bodyParser.json());
 const checkAuth = require("../Middleware/check-auth");
 
 router.use(bodyParser.urlencoded({ extended: false }));
-// const mongoose = require('mongoose');
-
+// const mongoose = require('mongoose')
 // mongoose.connect('mongodb://localhost/products');
 
 
 router.post('/post', (req, res, next) => {
+    
     var newProduct = new productSchema({
         id: req.body.id,
         category: req.body.category,
